@@ -9,6 +9,7 @@
         tools:context=".MainActivity"
         android:orientation="vertical">
     <com.heytap.wearable.support.widget.HeyMainTitleBar
+            android:id="@+id/title_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:heyText="@string/main_title"
