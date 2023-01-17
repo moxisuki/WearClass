@@ -10,11 +10,12 @@
     <FrameLayout
             android:layout_width="match_parent"
             android:layout_margin="7dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="26dp">
         <com.heytap.wearable.support.widget.HeyBackgroundView
                 android:id="@+id/normal"
                 style="@style/HeyCardBackgroundStyle"
-                android:layout_height="150dp">
+                android:layout_height="140dp">
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
