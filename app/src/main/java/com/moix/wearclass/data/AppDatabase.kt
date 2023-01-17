@@ -10,9 +10,10 @@ import com.moix.wearclass.WearApplication
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [LessonEntity::class], version = 1, exportSchema = false)
+@Database(entities = [LessonEntity::class,TimeEntity::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun lessonDao(): LessonDao
+    abstract fun timeDao(): TimeDao
 
     private class AppDatabaseCallback(
         private val scope: CoroutineScope

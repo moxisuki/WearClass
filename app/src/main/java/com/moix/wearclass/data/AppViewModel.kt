@@ -8,15 +8,28 @@ import androidx.lifecycle.viewModelScope
 import com.moix.wearclass.WearApplication
 import kotlinx.coroutines.launch
 
-class AppViewModel(application: Application): AndroidViewModel(application) {
+class AppViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val repository:AppRepository
-    val allLessonEntity:LiveData<List<LessonEntity>>
+    private val repository: AppRepository
+    private val allLessonEntity: LiveData<List<LessonEntity>>
+
+    private val repository2: TimeRepository
+    private val allTimeEntity: LiveData<List<TimeEntity>>
+
     init {
-        val wordsDao = AppDatabase.getDatabase(application,viewModelScope).lessonDao()
-        repository = AppRepository(wordsDao)
+        val database = AppDatabase.getDatabase(application, viewModelScope)
+        repository = AppRepository(database.lessonDao())
         allLessonEntity = repository.allLessons
+        repository2 = TimeRepository(database.timeDao())
+        allTimeEntity = repository2.allTimes
     }
+
+    fun test() = viewModelScope.launch {
+        val timeEntity = TimeEntity(0,1,2,1,1)
+        repository2.insert(timeEntity)
+        repository2.getCurrentTimeEntity()
+    }
+
 
     fun insert(lessonEntity: LessonEntity) = viewModelScope.launch {
         repository.insert(lessonEntity)

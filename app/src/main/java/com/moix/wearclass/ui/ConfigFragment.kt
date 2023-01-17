@@ -47,9 +47,10 @@ class ConfigFragment(val appViewModel: AppViewModel) : Fragment() {
         binding.buttonSecond.setOnClickListener{
             Thread {
                 Log.d(WearApplication.TAG, "onCreate: Clicked")
-                val todo = LessonEntity(0, 2 , 1, 2, "test", "101", "Li", "Beijing")
+                val todo = LessonEntity(0, 2, 1, 2, "test", "101", "Li", "Beijing")
                 appViewModel.insert(todo)
                 LessonUtils.isInLesson(todo)
+                appViewModel.test()
             }.start()
         }
     }
