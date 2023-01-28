@@ -10,13 +10,14 @@
     <com.heytap.wearable.support.widget.HeyMultipleDefaultItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:heyText="语文"
-            app:heySummaryText="8:20-9:00"
-            app:heyShowIcon="false"
+            app:heyText="上午第一节 语文"
+            app:heySummaryText="8:20-9:00 康老师 202"
+            app:heyShowIcon="true"
+            app:heyPrimaryImage="@drawable/ic_course_bolt"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/HeyMultipleDefaultItemStyle"
+            tools:ignore="PrivateResource"/>
 
-    />
 </androidx.constraintlayout.widget.ConstraintLayout>

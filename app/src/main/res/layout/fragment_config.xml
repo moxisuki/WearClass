@@ -4,28 +4,49 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:padding="5dp"
         android:layout_height="match_parent"
         tools:context=".ui.ConfigFragment">
 
     <TextView
             android:id="@+id/textview_second"
             android:layout_width="wrap_content"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
-            android:text="666"
-            app:layout_constraintTop_toTopOf="parent"
+            android:paddingBottom="5dp"
+            android:text="@string/config_h1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_second"
+            app:layout_constraintBottom_toTopOf="@id/edittext_first"
     />
+    <EditText
+            android:id="@+id/edittext_first"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/account"
+            app:layout_constraintBottom_toTopOf="@id/edittext_second"
+            style="@style/HeyEditTextStyle"
+            tools:ignore="PrivateResource"/>
 
-    <Button
-            android:id="@+id/button_second"
-            android:layout_width="wrap_content"
+    <EditText
+            android:id="@+id/edittext_second"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:layout_height="wrap_content"
-            android:text="@string/test"
-            app:layout_constraintTop_toBottomOf="@id/textview_second"
+            android:hint="@string/password"
+            app:layout_constraintBottom_toTopOf="@id/button_second"
+            style="@style/HeyEditTextStyle"
+            tools:ignore="PrivateResource"/>
+    <com.heytap.wearable.support.widget.HeyShapeButton
+            android:id="@+id/button_second"
+            style="@style/HeyBigShapeButtonStyle"
+            android:text="@string/config_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-    />
+            app:layout_constraintTop_toBottomOf="@id/edittext_second"
+            tools:ignore="PrivateResource"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

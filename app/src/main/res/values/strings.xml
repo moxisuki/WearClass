@@ -13,4 +13,8 @@
     <string name="main_title" translatable="false">上午第一节课</string>
     <string name="table_title">课程表</string>
     <string name="config_title">配置</string>
+    <string name="config_h1">超级课程表配置</string>
+    <string name="account">账号</string>
+    <string name="password">密码</string>
+    <string name="config_button">保存并更新</string>
 </resources>
