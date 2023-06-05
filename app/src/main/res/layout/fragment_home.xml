@@ -5,6 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:ignore="PrivateResource"
         tools:context=".ui.HomeFragment">
 
     <FrameLayout
@@ -15,39 +16,185 @@
         <com.heytap.wearable.support.widget.HeyBackgroundView
                 android:id="@+id/normal"
                 style="@style/HeyCardBackgroundStyle"
-                android:layout_height="140dp">
+                android:layout_height="160dp">
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center"
             >
-                <TextView
-                        android:text="语文"
-                        android:textColor="@color/white"
-                        android:textSize="30dp"
-                        android:layout_width="wrap_content"
-                        android:gravity="center"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView"/>
-                <TextView
-                        android:text="距离下课还有"
-                        android:textColor="#A6A4A4"
-                        android:textSize="15dp"
-                        android:layout_width="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView2"/>
-                <TextView
-                        android:text="13min 27s"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:layout_width="wrap_content"
+                <!--课程轮换-->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42.5dp"
                         android:gravity="center"
                         android:layout_marginTop="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView3"/>
+                        android:orientation="horizontal"
+                >
+                    <TextView
+                            android:text="早读"
+                            android:textColor="@color/white"
+                            android:textSize="22.5sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6.5dp"
+                            android:gravity="center_horizontal|top"
+                            android:alpha="0.5"
+                    />
+                    <TextView
+                            android:text="语文"
+                            android:textColor="@color/white"
+                            android:textSize="33sp"
+                            android:layout_width="wrap_content"
+                            android:gravity="center_horizontal|top"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:text="数学"
+                            android:textColor="@color/white"
+                            android:textSize="22.5sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6.5dp"
+                            android:gravity="center_horizontal|top"
+                            android:alpha="0.5"
+                    />
+                </LinearLayout>
+                <!--课程信息-->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                >
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:alpha="1">
+
+                        <View
+                                android:layout_width="1.5dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:textColor="#ff969292"
+                                android:layout_marginStart="6dp"
+                                android:text="@string/home_room"
+                                android:textSize="12sp"
+                        />
+                        <TextView
+                                android:text="C204"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="55dp"
+                                android:layout_marginEnd="15dp"
+                                android:gravity="center|end"
+                                android:textColor="#ffEFEFEF"
+                                android:textSize="11sp"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="15dp"
+                            android:alpha="1">
+
+                        <View
+                                android:layout_width="1.5dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:textColor="#ff969292"
+                                android:layout_marginStart="6dp"
+                                android:text="@string/home_teacher"
+                                android:textSize="12sp"
+                        />
+                        <TextView
+                                android:text="朱老师"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="55dp"
+                                android:layout_marginEnd="15dp"
+                                android:gravity="center|end"
+                                android:textColor="#ffEFEFEF"
+                                android:textSize="11sp"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="15dp"
+                            android:alpha="1">
+
+                        <View
+                                android:layout_width="1.5dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:textColor="#ff969292"
+                                android:layout_marginStart="6dp"
+                                android:text="@string/home_term"
+                                android:textSize="12sp"
+                        />
+                        <TextView
+                                android:text="40min"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="55dp"
+                                android:layout_marginEnd="15dp"
+                                android:gravity="center|end"
+                                android:textColor="#ffEFEFEF"
+                                android:textSize="11sp"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="15dp"
+                            android:alpha="1">
+
+                        <View
+                                android:layout_width="1.5dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:textColor="#ff969292"
+                                android:layout_marginStart="6dp"
+                                android:text="@string/home_take_time"
+                                android:textSize="12sp"
+                        />
+                        <TextView
+                                android:text="13min47s"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:gravity="center|end"
+                                android:textColor="#ffEFEFEF"
+                                android:textSize="11sp"
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
         </com.heytap.wearable.support.widget.HeyBackgroundView>
     </FrameLayout>

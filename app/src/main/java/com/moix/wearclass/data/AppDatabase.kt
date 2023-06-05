@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onOpen(db)
             // TODO just test
-            INSTANCE?.let { database ->
+            INSTANCE?.let {
                 scope.launch {
                     Log.d(WearApplication.TAG, "onCreate: Database Init")
                 }

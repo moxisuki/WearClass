@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -7,17 +7,11 @@
         android:layout_height="match_parent"
         tools:context=".ui.TableFragment">
 
-    <com.heytap.wearable.support.widget.HeyMultipleDefaultItem
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:heyText="上午第一节 语文"
-            app:heySummaryText="8:20-9:00 康老师 202"
-            app:heyShowIcon="true"
-            app:heyPrimaryImage="@drawable/ic_course_bolt"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            style="@style/HeyMultipleDefaultItemStyle"
-            tools:ignore="PrivateResource"/>
+            android:layout_height="match_parent"
+    />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

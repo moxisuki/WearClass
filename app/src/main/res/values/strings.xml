@@ -17,4 +17,8 @@
     <string name="account">账号</string>
     <string name="password">密码</string>
     <string name="config_button">保存并更新</string>
+    <string name="home_teacher">上课老师</string>
+    <string name="home_room">上课教室</string>
+    <string name="home_term">本节时长</string>
+    <string name="home_take_time">距离下课还有</string>
 </resources>

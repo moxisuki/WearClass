@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.moix.wearclass.R
+import com.moix.wearclass.data.TableList
 import com.moix.wearclass.databinding.FragmentTableBinding
 
 /**
@@ -30,7 +34,21 @@ class TableFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val data = mutableListOf<TableList>()
+        data.add(TableList("语文","早读","C204","朱老师","7:05-7:37"))
+        data.add(TableList("数学","早读","C204","朱老师","7:05-7:37"))
+        data.add(TableList("数学","早读","C204","朱老师","7:05-7:37"))
+        data.add(TableList("数学","早读","C204","朱老师","7:05-7:37"))
+        data.add(TableList("数学","早读","C204","朱老师","7:05-7:37"))
+        data.add(TableList("数学","早读","C204","朱老师","7:05-7:37"))
+        data.add(TableList("数学","早读","C204","朱老师","7:05-7:37"))
+        //使用Recycler
+        val layoutManager = LinearLayoutManager(view.context)
+        val recyclerView: RecyclerView = binding.mRecycler
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        recyclerView.layoutManager = layoutManager
+        val adapter = TableAdapter(data)
+        recyclerView.adapter = adapter
     }
 
     override fun onDestroyView() {
